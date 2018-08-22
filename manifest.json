@@ -1,0 +1,33 @@
+{
+    "name": "ay test1",
+    "version": "0.0.1",
+    "manifest_version": 2,  
+   
+    "description": "chrome plug open pages in the bookmark",
+    "icons": {
+      "16": "image/3.jpg",
+      "48": "image/3.jpg"
+    },
+    "default_locale": "zh_CN",
+   
+    "browser_action": {
+      "default_title": "书签打开器",
+      "default_icon": "image/3.jpg",
+      "default_popup": "popup.html"
+    },
+   
+    "content_scripts": [
+      {
+        "js": ["test.js"],
+        "matches": [
+          "http://*/*",
+          "https://*/*"
+        ],
+        "run_at": "document_start"
+      }
+    ],
+    "permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+}
